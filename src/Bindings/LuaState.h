@@ -366,7 +366,7 @@ protected:
 
 	/** Variadic template: Counting args means add one to the count of the rest. */
 	template <typename T, typename... Args>
-	int CountArgs(T, Args... args)
+	int CountArgs(T, Args &&... args)
 	{
 		return 1 + CountArgs(args...);
 	}
